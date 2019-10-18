@@ -2,6 +2,33 @@
 
 .main-header-box {
     height: 100px;
-    .screenTop
+    .screenTop;
+    .wh(100% , 60px);
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.05);
+    .container {
+        .flex();
+        max-width: 900px;
+        height: 100%;
+        margin: auto;
+        .logo {
+            display: inline-block;
+            height: 50px;
+            min-width: 60px;
+            img {
+                .wh(50px,50px);
+            }
+        }
+        .main-nav {
+            height: 100%;
+            flex: 1 0 auto;
+            .nav-list {
+                .flex(space-between);
+                height: 100%;
+                .left-items {
+                    display: flex;
+                }
+            }
+        }
+    }
 }
-    

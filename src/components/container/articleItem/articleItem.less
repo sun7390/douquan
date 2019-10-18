@@ -1,0 +1,34 @@
+@import (reference) "../../../styles/mixin.less";
+.content-box {
+    padding: 15px 20px;
+    border-bottom: 1px solid #edeeef;
+    .meta-list {
+        .flex(flex-start,center);
+        .meta-item {
+            height: 20px;
+            padding: 0 10px 0 0;
+        }
+    }
+    .info-title {
+        font-size: 17px;
+        font-weight: 600;
+        color: #2e3135;
+        line-height: 30px;
+    }
+    .action-list {
+        margin-top: 10px;
+        .flex(flex-start,center);
+        .actions {
+            .flex();
+            border: 0.5px solid #edeeef;
+            padding-right: 10px;
+            .action {
+                height:25px;
+                padding-right: 5px;
+            }
+            .count {
+                font-size: 13px;
+            }
+        }
+    }
+}

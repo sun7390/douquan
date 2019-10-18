@@ -4,7 +4,7 @@ import './index.css';
 import Route from './routes/router'
 import { AppContainer } from 'react-hot-loader'
 import * as serviceWorker from './serviceWorker';
-
+import './styles/common.less';
 const render = Component => {
     ReactDOM.render(
         <AppContainer>

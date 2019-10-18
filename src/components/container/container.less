@@ -1,0 +1,37 @@
+@import (reference) "../../styles/mixin.less";
+@white: #fff;
+.main-container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 900px;
+    min-height: 1000px;
+    margin-top: 90px;
+    .view {
+        margin-top: 95px;
+        .flex(space-between,flex-start);
+        .wh(900px,1000px);
+        .view-context {
+            .wh(70%,100%);
+            background-color: @white;
+            .category-nav {
+                border-bottom: 1px solid hsla(0,0%,59.2%,.1);
+                .category-list {
+                    padding: 16px 16px;
+                    font-size: 14px;
+                    .list-nav {
+                        .nav-list {
+                            .flex(flex-start,center);
+                            .nav-item {
+                                height: 15px;
+                                border-right: 1px solid hsla(0,0%,59.2%,.2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .view-side {
+            .wh(25%,100%);
+        }
+    }
+}

@@ -1,10 +1,21 @@
+@basic_color: #fff;
 
-.screenTop(@position: absolute, @backColor: red) when (iskeyword(@position)), (iscolor(@@backColor)) {
+.screenTop(@position: absolute, @backColor: @basic_color) when (iskeyword(@position)), (iscolor(@backColor)) {
     position: @position;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
     background-color: @backColor;
+}
+
+.wh(@w, @h) when (ispixel(@w)), (ispercentage(@w)), (ispixel(@h)), (ispercentage(@h)){
+    width: @w;
+    height: @h;
+}
+
+.flex(@justify-content: center, @align-items: center) when (iskeyword(@justify-content)), (iskeyword(@align-items)) {
+    display: flex;
+    justify-content: @justify-content;
+    align-items: @align-items;
 }

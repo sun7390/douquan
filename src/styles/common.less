@@ -1,0 +1,45 @@
+@import (reference) "./mixin.less";
+
+@background-color:  #efefef;
+body,div,span,header,section,ul,li {
+    margin:0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+}
+body {
+    background-color: @background-color;
+}
+li {
+    padding: 0 10px;
+    height: 50px;
+    .flex();
+}
+a {
+    text-decoration:none;
+}
+a:visited { 
+    color: #000000; 
+    text-decoration: none; 
+} 
+a:hover { 
+    color:#007fff;
+    text-decoration: none; 
+}
+
+@font-face {
+    font-family: 'iconfont';  /* project id 1465515 */
+    src: url('//at.alicdn.com/t/font_1465515_fii9gpjf3dk.eot');
+    src: url('//at.alicdn.com/t/font_1465515_fii9gpjf3dk.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_1465515_fii9gpjf3dk.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_1465515_fii9gpjf3dk.woff') format('woff'),
+    url('//at.alicdn.com/t/font_1465515_fii9gpjf3dk.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_1465515_fii9gpjf3dk.svg#iconfont') format('svg');
+  }
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
