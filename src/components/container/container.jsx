@@ -2,20 +2,24 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import ArticleItem from './articleItem/articleItem'
 import './container.less'
+const fetch = require('../../utils/fetch').fetch
 export default class container extends Component {
     constructor() {
         super() 
-        this.item = {
-            meta: {
-                topic: "http",
-                author: "sunyang"
-            },
-            title: "关于 http 缓存，这些知识点你可能都不懂",
-            count: 10,
-            comment: 10
+        this.state = {
+            articleList: []
         }
     }
+    componentDidMount() {
+        fetch('/web/article/index',{limit:10})
+            .then(res => {
+                this.setState({
+                    articleList: res
+                })
+            })
+    }
     render() {
+        const { articleList } = this.state
         return(
             <main className="main-container">
                 <div className="view">
@@ -32,7 +36,11 @@ export default class container extends Component {
                             </header>
                         </nav>
                         <ul className="article-list">
-                            <ArticleItem item={this.item}/>
+                            {
+                                articleList.map((item,index) => (
+                                    <ArticleItem key={index} item={item}/>
+                                ))
+                            }
                         </ul>
                     </div>
                     <aside className="view-side">
